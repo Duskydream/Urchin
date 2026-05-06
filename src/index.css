@@ -1,0 +1,110 @@
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  color: var(--text);
+  background: var(--app-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --app-bg: #edf5f1;
+  --surface: #fbfefc;
+  --surface-raised: #ffffff;
+  --surface-soft: #e3eee9;
+  --sidebar-bg: #203f3b;
+  --sidebar-text: #f4fbf7;
+  --sidebar-item: rgba(255, 255, 255, 0.1);
+  --text: #21302d;
+  --heading: #14211f;
+  --muted: #61746f;
+  --label: #435b56;
+  --primary: #2f7d6d;
+  --primary-contrast: #ffffff;
+  --accent: #c4934e;
+  --accent-contrast: #ffffff;
+  --danger: #b85c50;
+  --border: #cfddd7;
+  --control-bg: #ffffff;
+  --timer-bg-start: #ffffff;
+  --timer-bg-end: #edf7f2;
+  --progress-bg: #d2e2dc;
+  --metric-bg: #ecf5d8;
+  --metric-text: #587238;
+  --chart-axis: #6a7b76;
+  --shadow: 0 14px 38px rgba(28, 57, 51, 0.1);
+}
+
+:root[data-theme='costudy'] {
+  --app-bg: #f6f1e9;
+  --surface: #fffaf3;
+  --surface-raised: #fffdf8;
+  --surface-soft: #f8ecdc;
+  --sidebar-bg: #263c4a;
+  --sidebar-text: #f8f3eb;
+  --sidebar-item: rgba(255, 255, 255, 0.08);
+  --text: #33261d;
+  --heading: #2d2520;
+  --muted: #7e8ca0;
+  --label: #6f5c4c;
+  --primary: #4578d9;
+  --primary-contrast: #ffffff;
+  --accent: #ce9366;
+  --accent-contrast: #ffffff;
+  --danger: #b34b3f;
+  --border: #eadfce;
+  --control-bg: #fffdf8;
+  --timer-bg-start: #fffdf8;
+  --timer-bg-end: #f9efe0;
+  --progress-bg: #eadfce;
+  --metric-bg: #fff3cf;
+  --metric-text: #9c7449;
+  --chart-axis: #7e8ca0;
+  --shadow: 0 14px 38px rgba(64, 48, 32, 0.08);
+}
+
+:root[data-theme='night'] {
+  --app-bg: #141a1f;
+  --surface: #1d252b;
+  --surface-raised: #222c33;
+  --surface-soft: #25313a;
+  --sidebar-bg: #0f171b;
+  --sidebar-text: #eef7f3;
+  --sidebar-item: rgba(255, 255, 255, 0.08);
+  --text: #dce8e4;
+  --heading: #f4fbf8;
+  --muted: #91a39d;
+  --label: #b4c5bf;
+  --primary: #64b9a7;
+  --primary-contrast: #0f171b;
+  --accent: #d6a85f;
+  --accent-contrast: #17130d;
+  --danger: #d5766c;
+  --border: #314048;
+  --control-bg: #192126;
+  --timer-bg-start: #222c33;
+  --timer-bg-end: #182126;
+  --progress-bg: #33444d;
+  --metric-bg: #2b3b30;
+  --metric-text: #c8d99d;
+  --chart-axis: #91a39d;
+  --shadow: 0 16px 42px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
