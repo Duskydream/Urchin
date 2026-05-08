@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "tauri:dev:msvc": "powershell -ExecutionPolicy Bypass -File scripts/dev-tauri-msvc.ps1"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.11.0",

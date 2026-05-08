@@ -5,9 +5,9 @@
   "identifier": "com.learningtool.app",
   "build": {
     "frontendDist": "../dist",
-    "devUrl": "http://localhost:5173",
-    "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build"
+    "devUrl": "http://127.0.0.1:5173",
+    "beforeDevCommand": "powershell -ExecutionPolicy Bypass -File src-tauri/dev-frontend.ps1",
+    "beforeBuildCommand": "powershell -ExecutionPolicy Bypass -File src-tauri/build-frontend.ps1"
   },
   "app": {
     "windows": [

@@ -89,6 +89,56 @@ http://localhost:5173
 npm run tauri dev
 ```
 
+从项目根目录运行 Tauri 命令时，Tauri 会通过 `src-tauri/dev-frontend.ps1` 自动切回项目根目录启动 Vite。开发地址固定为：
+
+```text
+http://127.0.0.1:5173
+```
+
+如果看到 Tauri 一直提示：
+
+```text
+Waiting for your frontend dev server to start on http://127.0.0.1:5173/
+```
+
+先单独检查前端服务：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File src-tauri/dev-frontend.ps1
+```
+
+然后访问：
+
+```text
+http://127.0.0.1:5173
+```
+
+如果 Windows 上遇到类似下面的 MSVC 链接错误：
+
+```text
+LINK : fatal error LNK1181: 无法打开输入文件“kernel32.lib”
+```
+
+说明当前终端没有正确加载 Visual Studio / Windows SDK 的 `LIB`、`INCLUDE` 环境变量。可以改用项目内置的 Windows 启动脚本：
+
+```powershell
+npm run tauri:dev:msvc
+```
+
+这个脚本会自动查找本机最新的 MSVC 和 Windows SDK 目录，并在当前进程里补齐：
+
+```text
+PATH
+LIB
+INCLUDE
+```
+
+如果脚本仍然报找不到 `kernel32.lib` 或 `windows.h`，需要用 Visual Studio Installer 安装或修复：
+
+- MSVC v143/vNext x64/x86 build tools
+- Windows 10/11 SDK
+- C++ CMake tools for Windows
+
 桌面端会优先使用 SQLite 数据库：
 
 ```text
